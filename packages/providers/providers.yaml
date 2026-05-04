@@ -12115,12 +12115,12 @@ northbeam:
     proxy:
         base_url: https://${connectionConfig.subdomain}.northbeam.io
         headers:
-            authorization: ${apiKey}
+            authorization: Basic ${apiKey}
             data-client-id: ${connectionConfig.dataClientId}
         verification:
             method: GET
             endpoints:
-                - /v2/orders
+                - /v1/exports/attribution-models
     docs: https://nango.dev/docs/api-integrations/northbeam
     docs_connect: https://nango.dev/docs/api-integrations/northbeam/connect
     connection_config:
