@@ -249,7 +249,6 @@ export class SyncManagerService {
     }
 
     public async runSyncCommand({
-        recordsService,
         orchestrator,
         environment,
         providerConfigKey,
@@ -260,7 +259,6 @@ export class SyncManagerService {
         initiator,
         deleteRecords
     }: {
-        recordsService: RecordsServiceInterface;
         orchestrator: Orchestrator;
         environment: DBEnvironment;
         providerConfigKey: string;
@@ -323,7 +321,6 @@ export class SyncManagerService {
                     command,
                     environmentId: environment.id,
                     logCtx,
-                    recordsService,
                     initiator,
                     delete_records: deleteRecords
                 });
@@ -357,7 +354,6 @@ export class SyncManagerService {
                     command,
                     environmentId: environment.id,
                     logCtx,
-                    recordsService,
                     initiator,
                     delete_records: deleteRecords
                 });
